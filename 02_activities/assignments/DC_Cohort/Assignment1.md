@@ -205,5 +205,5 @@ Consider, for example, concepts of fariness, inequality, social structures, marg
 
 
 ```
-Your thoughts...
+Databases are efficient when dealing with business. However, they are also rulebook in disguise. Every column and row has defined something, anything not fit will be considered as "excluded", while it benefit majority, it is not fair in some complicated case. Thus, it is important to pay attention to the area where the databases ignore, let databases serve society instead of define society.
 ```
