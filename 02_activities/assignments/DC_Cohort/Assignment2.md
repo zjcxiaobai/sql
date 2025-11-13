@@ -31,7 +31,6 @@ Steps to complete this part of the assignment:
 - Duplicate the logical data model and add another table to it following the instructions
 - Write, within this markdown file, an answer to Prompt 3
 
-
 ###  Design a Logical Model
 
 #### Prompt 1
@@ -54,7 +53,30 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+Type 1 - overwrite case
+table name: customer_address
+column:
+    customer_id - PM
+    address
+    city
+    state
+    post_code
+    updated_date
+The address can be updated using UPDATE, for example: UPDATE customer_address SET xxx WHERE customer_id = xx
+
+Type 2 - keep the history 
+table name: customer_address
+column: (primary key is a combination of customer_id and start_date)
+    customer_id 
+    address
+    city
+    state
+    state
+    post_code
+    start_date
+    end_date
+    is_current_address
+The address can be update by doing INSERT new addresses, history address will still be there
 ```
 
 ***
@@ -183,5 +205,5 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+There are a lot human choices and labor behind the so-called artificial intelligence, from collecting and labels data to selecting metrics, deplos models. The key ethical issues are still about human. There are a lot issues such as consent and privacy while collecting data, bias during labelling. In this case, while appreciate the efficiency benefitted from AI, we still need to consider the ethics behind it.
 ```
